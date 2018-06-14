@@ -9,15 +9,15 @@ type Sensor struct {
 	Id         int
 	Address    ble.Addr
 	Kilopascal int
-	Psi int
-	Celsius    int
+	Psi 	   float32
+	Celsius    float32
 }
 
 func (this *Sensor) ParseData(b []byte) {
 	// Bytes 8 to 11 are pressure in kPa.
 	this.Kilopascal = int(binary.LittleEndian.Uint32(b[8:]) / 1000)
 	// Bytes 8 to 11 are pressure in kPa.
-	this.Psi = int(binary.LittleEndian.Uint32(b[8:]) / 6894)
+	this.Psi = float32(binary.LittleEndian.Uint32(b[8:]) / 6894)
 	// Bytes 12 to 15 are temperature in Celsius.
-	this.Celsius = int(binary.LittleEndian.Uint32(b[12:]) / 100)
+	this.Celsius = float32(binary.LittleEndian.Uint32(b[12:]) / 100)
 }
