@@ -25,7 +25,8 @@ func main() {
 	for *duration == 0 || time.Now().Sub(start) < *duration {
 		for _, sensor := range tires.Read() {
 			if sensor != nil {
-				fmt.Printf("Sensor: %d, kPa: %d, °C: %d\n", sensor.Id, sensor.Kilopascal, sensor.Celsius)
+				// fmt.Printf("Sensor: %d, kPa: %d, °C: %d\n", sensor.Id, sensor.Kilopascal, sensor.Celsius)
+				fmt.Printf("Sensor: %d, Psi: %d, °C: %d\n", sensor.Id, sensor.Psi, sensor.Celsius)
 			}
 		}
 		time.Sleep(5 * time.Second)
