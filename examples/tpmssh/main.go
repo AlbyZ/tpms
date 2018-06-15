@@ -3,7 +3,7 @@ package main
 import (
 	"flag"
 	"fmt"
-	"github.com/Albyz/tpms"
+	"github.com/AlbyZ/tpms"
 	"log"
 	"time"
 )
