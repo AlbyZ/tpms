@@ -22,5 +22,5 @@ func (this *Sensor) ParseData(b []byte) {
 	// Bytes 12 to 15 are temperature in Celsius.
 	this.Celsius = float32(binary.LittleEndian.Uint32(b[12:]) / 100)
 	// Bytes 16 to 17 are Battery Charge in Percentage.
-	this.Percentage = int(binary.LittleEndian.Uint16(b[16:])
+	this.Percentage = int(binary.LittleEndian.Uint16(b[16:]))
 }
