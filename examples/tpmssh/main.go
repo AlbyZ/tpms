@@ -27,7 +27,7 @@ func main() {
 			if sensor != nil {
 				// fmt.Printf("Sensor: %d, kPa: %d, °C: %d\n", sensor.Id, sensor.Kilopascal, sensor.Celsius)
 				// fmt.Printf("Sensor: %d, Psi: %d, °C: %d\n", sensor.Id, sensor.Psi, sensor.Celsius)
-				fmt.Printf("Sensor: %d, Psi: %.1f, °C: %.1f\n", sensor.Id, sensor.Psi, sensor.Celsius)
+				fmt.Printf("Sensor: %d, Psi: %.1f, °C: %.1f, %d%%\n", sensor.Id, sensor.Psi, sensor.Celsius, sensor.Percentage)
 			}
 		}
 		time.Sleep(5 * time.Second)
